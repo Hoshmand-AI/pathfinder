@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "PathFinder — Your AI Academic Navigator",
@@ -20,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="bg-slate-50 text-slate-900 antialiased">
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <body className="bg-slate-50 text-slate-900 antialiased font-sans">
         <Navbar />
         {children}
       </body>

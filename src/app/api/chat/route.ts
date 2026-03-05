@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+export const dynamic = "force-dynamic";
 
 const SYSTEM_PROMPT = `You are PathFinder's AI Academic Advisor — the world's most knowledgeable, empathetic, and practical college guidance counselor for US students.
 
@@ -48,6 +46,8 @@ export async function POST(req: NextRequest) {
       { status: 200 }
     );
   }
+
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
   try {
     const { messages, profile } = await req.json();
