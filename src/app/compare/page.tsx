@@ -41,29 +41,19 @@ export default function ComparePage() {
   };
 
   return (
-    <main className="lg:pl-[260px] min-h-screen bg-slate-50">
-      <div className="pt-16 lg:pt-0">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-700 to-teal-600 px-6 py-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <Scale className="w-8 h-8 text-white" />
-                  <h1 className="text-3xl font-black text-white">Compare Universities</h1>
-                </div>
-                <p className="text-blue-200">Side-by-side comparison of up to 4 universities</p>
-              </div>
-              {comparedUniversities.length > 0 && (
-                <button onClick={clearCompare} className="text-white/70 hover:text-white text-sm flex items-center gap-1 transition-colors">
-                  <X className="w-4 h-4" /> Clear All
-                </button>
-              )}
+    <main className="min-h-screen bg-gray-50 pt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Compare Universities</h1>
+              <p className="text-gray-600">Side-by-side comparison of up to 4 universities</p>
             </div>
+            {comparedUniversities.length > 0 && (
+              <button onClick={clearCompare} className="text-gray-500 hover:text-gray-700 text-sm flex items-center gap-1 transition-colors border border-gray-200 px-3 py-1.5 rounded-lg hover:bg-gray-50">
+                <X className="w-4 h-4" /> Clear All
+              </button>
+            )}
           </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           {comparedUniversities.length === 0 ? (
             <div className="text-center py-20">
               <Scale className="w-16 h-16 text-gray-300 mx-auto mb-4" />
@@ -237,7 +227,6 @@ export default function ComparePage() {
             </>
           )}
         </div>
-      </div>
     </main>
   );
 }

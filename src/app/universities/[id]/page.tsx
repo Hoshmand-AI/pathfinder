@@ -38,8 +38,7 @@ export default function UniversityDetailPage({ params }: { params: Promise<{ id:
   };
 
   return (
-    <main className="lg:pl-[260px] min-h-screen bg-slate-50">
-      <div className="pt-16 lg:pt-0">
+    <main className="min-h-screen bg-gray-50 pt-16">
         {/* Hero */}
         <div style={{ background: `linear-gradient(135deg, ${university.colors[0] || '#1e40af'}, ${university.colors[1] || '#7c3aed'})` }}
           className="px-6 py-10">
@@ -274,7 +273,6 @@ export default function UniversityDetailPage({ params }: { params: Promise<{ id:
             </div>
           </div>
         </div>
-      </div>
     </main>
   );
 }

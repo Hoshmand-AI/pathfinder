@@ -26,8 +26,7 @@ export default function MajorDetailPage({ params }: { params: Promise<{ slug: st
   ];
 
   return (
-    <main className="lg:pl-[260px] min-h-screen bg-slate-50">
-      <div className="pt-16 lg:pt-0">
+    <main className="min-h-screen bg-gray-50 pt-16">
         {/* Hero */}
         <div className="bg-gradient-to-r from-blue-700 to-violet-700 px-6 py-10">
           <div className="max-w-5xl mx-auto">
@@ -239,7 +238,6 @@ export default function MajorDetailPage({ params }: { params: Promise<{ slug: st
             </div>
           </div>
         </div>
-      </div>
     </main>
   );
 }

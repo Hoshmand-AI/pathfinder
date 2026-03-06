@@ -45,8 +45,7 @@ export default function ParentDashboardPage() {
   ] as const;
 
   return (
-    <main className="lg:pl-[260px] min-h-screen bg-slate-50">
-      <div className="pt-16 lg:pt-0">
+    <main className="min-h-screen bg-gray-50 pt-16">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-800 to-indigo-700 px-6 py-10">
           <div className="max-w-7xl mx-auto">
@@ -384,7 +383,6 @@ export default function ParentDashboardPage() {
             </div>
           )}
         </div>
-      </div>
     </main>
   );
 }

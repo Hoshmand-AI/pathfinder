@@ -78,22 +78,18 @@ export default function ApplicationsPage() {
     }, 0) / apps.length);
 
   return (
-    <main className="lg:pl-[260px] min-h-screen bg-slate-50">
-      <div className="pt-16 lg:pt-0">
+    <main className="min-h-screen bg-gray-50 pt-16">
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-600 to-blue-600 px-6 py-10">
+        <div className="bg-white border-b border-gray-200 px-6 py-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <ClipboardList className="w-8 h-8 text-white" />
-                  <h1 className="text-3xl font-black text-white">Application Tracker</h1>
-                </div>
-                <p className="text-teal-200">Manage your college list, track deadlines, and stay organized.</p>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">Application Tracker</h1>
+                <p className="text-gray-600">Manage your college list, track deadlines, and stay organized.</p>
               </div>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="flex items-center gap-2 bg-white text-teal-700 px-5 py-2.5 rounded-2xl font-bold text-sm hover:bg-teal-50 transition-colors shadow-lg flex-shrink-0"
+                className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-indigo-700 transition-colors flex-shrink-0"
               >
                 <Plus className="w-4 h-4" /> Add School
               </button>
@@ -101,7 +97,7 @@ export default function ApplicationsPage() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {apps.length === 0 ? (
             <div className="text-center py-20">
               <ClipboardList className="w-16 h-16 text-gray-300 mx-auto mb-4" />
@@ -268,7 +264,6 @@ export default function ApplicationsPage() {
             </>
           )}
         </div>
-      </div>
 
       {/* Add Modal */}
       {showAddModal && (

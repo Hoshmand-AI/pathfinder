@@ -44,9 +44,8 @@ export default function DashboardPage() {
   ];
 
   return (
-    <main className="lg:pl-[260px] min-h-screen bg-slate-50">
-      <div className="pt-16 lg:pt-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <main className="min-h-screen bg-gray-50 pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Welcome header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <div>
@@ -247,7 +246,6 @@ export default function DashboardPage() {
               </div>
             </div>
           )}
-        </div>
       </div>
     </main>
   );
