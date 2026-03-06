@@ -78,9 +78,9 @@ export default function ApplicationsPage() {
     }, 0) / apps.length);
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-14">
+    <main className="min-h-screen bg-[#F5F5F7] pt-14">
       {/* Header */}
-      <div className="bg-white border-b border-gray-100 px-6 py-8">
+      <div className="bg-white border-b border-gray-200 px-6 py-8 shadow-sm">
         <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
@@ -122,12 +122,12 @@ export default function ApplicationsPage() {
             <>
               {/* Summary bar */}
               <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-8">
-                <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm text-center md:col-span-1">
+                <div className="bg-white rounded-2xl p-4 border border-gray-200 shadow-sm text-center md:col-span-1">
                   <p className="text-2xl font-black text-gray-900">{apps.length}</p>
                   <p className="text-xs text-gray-500">Total Schools</p>
                 </div>
                 {STATUSES.map((s) => (
-                  <div key={s} className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm text-center">
+                  <div key={s} className="bg-white rounded-2xl p-4 border border-gray-200 shadow-sm text-center">
                     <p className="text-2xl font-black text-gray-900">{byStatus[s].length}</p>
                     <p className="text-xs text-gray-500">{s}</p>
                   </div>
@@ -161,7 +161,7 @@ export default function ApplicationsPage() {
                       const isExpanded = expanded === app.id;
 
                       return (
-                        <div key={app.id} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                        <div key={app.id} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
                           {/* Card header */}
                           <div className="p-4">
                             <div className="flex items-start justify-between mb-2">
@@ -234,7 +234,7 @@ export default function ApplicationsPage() {
                           {/* Expand tasks */}
                           <button
                             onClick={() => setExpanded(isExpanded ? null : app.id)}
-                            className="w-full flex items-center justify-between px-4 py-2 bg-gray-50 border-t border-gray-100 text-xs font-medium text-gray-500 hover:bg-gray-100 transition-colors"
+                            className="w-full flex items-center justify-between px-4 py-2 bg-gray-50 border-t border-gray-200 text-xs font-medium text-gray-500 hover:bg-gray-100 transition-colors"
                           >
                             Checklist
                             {isExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}

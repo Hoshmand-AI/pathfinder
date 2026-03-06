@@ -36,8 +36,8 @@ export default function CareersPage() {
   const selectedCareer = careers.find((c) => c.id === selected);
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-14">
-      <div className="bg-white border-b border-gray-100 px-6 py-8">
+    <main className="min-h-screen bg-[#F5F5F7] pt-14">
+      <div className="bg-white border-b border-gray-200 px-6 py-8 shadow-sm">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-2xl font-bold text-gray-900 mb-1">Career Path Explorer</h1>
             <p className="text-gray-500 text-sm mb-5">Explore {careers.length}+ careers with real salary data, growth rates, and employer insights.</p>
@@ -89,7 +89,7 @@ export default function CareersPage() {
                     onClick={() => setSelected(isActive ? null : c.id)}
                     className={cn(
                       "w-full text-left bg-white rounded-2xl p-5 border transition-all hover:shadow-lg",
-                      isActive ? "border-emerald-400 shadow-lg ring-1 ring-emerald-400" : "border-gray-100 hover:-translate-y-0.5"
+                      isActive ? "border-emerald-400 shadow-lg ring-1 ring-emerald-400" : "border-gray-200 hover:-translate-y-0.5"
                     )}
                   >
                     <div className="flex items-start justify-between mb-3">
@@ -124,7 +124,7 @@ export default function CareersPage() {
             {/* Career Detail Panel */}
             {selectedCareer && (
               <div className="lg:col-span-2 space-y-5">
-                <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm sticky top-6">
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm sticky top-6">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h2 className="text-2xl font-black text-gray-900 mb-1">{selectedCareer.title}</h2>

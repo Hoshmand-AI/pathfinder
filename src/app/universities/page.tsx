@@ -38,8 +38,8 @@ export default function UniversitiesPage() {
   const typeOptions: TypeFilter[] = ["All", "Public", "Private", "Ivy League", "Liberal Arts", "Community College"];
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-14">
-      <div className="bg-white border-b border-gray-100 px-6 py-8">
+    <main className="min-h-screen bg-[#F5F5F7] pt-14">
+      <div className="bg-white border-b border-gray-200 px-6 py-8 shadow-sm">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-2xl font-bold text-gray-900 mb-1">Find Your University</h1>
             <p className="text-gray-500 text-sm mb-5">Browse {universities.length}+ US colleges with rankings, costs, and outcomes data.</p>
@@ -70,7 +70,7 @@ export default function UniversitiesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           {/* Filters panel */}
           {showFilters && (
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-6">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mb-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">State</label>
@@ -149,7 +149,7 @@ export default function UniversitiesPage() {
               const chance = admissionChance(u.acceptanceRate, u.satRange, profile.satScore);
 
               return (
-                <div key={u.id} className="bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 overflow-hidden group">
+                <div key={u.id} className="bg-white rounded-2xl border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 overflow-hidden group">
                   {/* Color band */}
                   <div className="h-2" style={{ background: `linear-gradient(90deg, ${u.colors[0] || '#2563eb'}, ${u.colors[1] || '#7c3aed'})` }} />
 
@@ -226,7 +226,7 @@ export default function UniversitiesPage() {
                       disabled={!inCompare && profile.compareList.length >= 4}
                       className={cn("flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-sm font-semibold border transition-all",
                         inCompare ? "bg-blue-600 text-white border-blue-600" :
-                        profile.compareList.length >= 4 ? "bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed" :
+                        profile.compareList.length >= 4 ? "bg-gray-50 text-gray-300 border-gray-200 cursor-not-allowed" :
                         "bg-gray-50 text-gray-600 border-gray-200 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600"
                       )}
                     >

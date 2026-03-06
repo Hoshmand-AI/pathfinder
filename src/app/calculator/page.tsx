@@ -68,8 +68,8 @@ export default function CalculatorPage() {
   );
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-14">
-      <div className="bg-white border-b border-gray-100 px-6 py-8">
+    <main className="min-h-screen bg-[#F5F5F7] pt-14">
+      <div className="bg-white border-b border-gray-200 px-6 py-8 shadow-sm">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-3 mb-1">
               <Calculator className="w-5 h-5 text-gray-700" />
@@ -97,7 +97,7 @@ export default function CalculatorPage() {
             {/* Inputs */}
             <div className="lg:col-span-2 space-y-5">
               {/* Costs */}
-              <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
                 <h2 className="text-lg font-bold text-gray-900 mb-1">Annual Costs</h2>
                 <p className="text-gray-500 text-sm mb-5">Enter costs per year</p>
                 <Slider label="Tuition & Fees" value={tuition} onChange={setTuition} min={3000} max={70000} step={500} />
@@ -110,7 +110,7 @@ export default function CalculatorPage() {
               </div>
 
               {/* Aid */}
-              <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
                 <h2 className="text-lg font-bold text-gray-900 mb-1">Financial Aid & Contributions</h2>
                 <p className="text-gray-500 text-sm mb-5">Enter all sources of money that reduce your cost</p>
                 <Slider label="Federal/State Grants (FAFSA-based)" value={grants} onChange={setGrants} min={0} max={30000} step={250} />
@@ -124,7 +124,7 @@ export default function CalculatorPage() {
               </div>
 
               {/* Program & Loan */}
-              <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
                 <h2 className="text-lg font-bold text-gray-900 mb-5">Loan & Career Projection</h2>
                 <div className="grid grid-cols-2 gap-4 mb-5">
                   <div>
@@ -177,7 +177,7 @@ export default function CalculatorPage() {
               </div>
 
               {/* Total loan */}
-              <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+              <div className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
                 <h3 className="font-bold text-gray-900 mb-4">Total Loan Summary</h3>
                 <div className="space-y-3">
                   {[
@@ -217,7 +217,7 @@ export default function CalculatorPage() {
               </div>
 
               {/* ROI */}
-              <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+              <div className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <TrendingUp className="w-5 h-5 text-emerald-500" />
                   <h3 className="font-bold text-gray-900">10-Year ROI</h3>

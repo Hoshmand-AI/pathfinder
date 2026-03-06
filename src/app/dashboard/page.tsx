@@ -35,7 +35,7 @@ export default function DashboardPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-14">
+    <main className="min-h-screen bg-[#F5F5F7] pt-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
 
         {/* Header */}
@@ -69,7 +69,7 @@ export default function DashboardPage() {
           ].map((s) => {
             const Icon = s.icon;
             return (
-              <Link key={s.label} href={s.href} className="bg-white rounded-xl border border-gray-100 p-5 hover:shadow-sm hover:border-gray-200 transition-all group">
+              <Link key={s.label} href={s.href} className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-sm hover:border-gray-200 transition-all group">
                 <div className="flex items-center justify-between mb-3">
                   <Icon className="w-4 h-4 text-gray-400" />
                   <ChevronRight className="w-3.5 h-3.5 text-gray-300 group-hover:text-gray-500 transition-colors" />
@@ -108,7 +108,7 @@ export default function DashboardPage() {
                 <Link
                   key={href}
                   href={href}
-                  className="flex items-center gap-3 bg-white border border-gray-100 rounded-xl p-3.5 hover:shadow-sm hover:border-gray-200 transition-all group"
+                  className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-3.5 hover:shadow-sm hover:border-gray-200 transition-all group"
                 >
                   <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${color}`}>
                     <Icon className="w-4 h-4" />
@@ -133,7 +133,7 @@ export default function DashboardPage() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {topMajors.map((major) => (
-                  <Link key={major.id} href={`/majors/${major.id}`} className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-sm hover:border-gray-200 transition-all group">
+                  <Link key={major.id} href={`/majors/${major.id}`} className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm hover:border-gray-200 transition-all group">
                     <div className="flex items-start justify-between mb-2">
                       <p className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">{major.name}</p>
                       {major.isTrending && (
@@ -160,7 +160,7 @@ export default function DashboardPage() {
               </div>
               <div className="space-y-2">
                 {topUnivs.map((uni) => (
-                  <Link key={uni.id} href={`/universities/${uni.id}`} className="flex items-center gap-4 bg-white border border-gray-100 rounded-xl p-4 hover:shadow-sm hover:border-gray-200 transition-all group">
+                  <Link key={uni.id} href={`/universities/${uni.id}`} className="flex items-center gap-4 bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm hover:border-gray-200 transition-all group">
                     <div className="w-9 h-9 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 text-sm font-bold text-gray-600">
                       #{uni.ranking}
                     </div>

@@ -107,7 +107,7 @@ export default function ChatPage() {
     <main className="min-h-screen bg-gray-50 flex flex-col pt-14">
       <div className="flex flex-col flex-1">
         {/* Header */}
-        <div className="bg-white border-b border-gray-100 px-6 py-4 flex-shrink-0">
+        <div className="bg-white border-b border-gray-200 px-6 py-4 flex-shrink-0">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl bg-blue-50 flex items-center justify-center">
@@ -165,7 +165,7 @@ export default function ChatPage() {
                       <button
                         key={q.text}
                         onClick={() => sendMessage(q.text)}
-                        className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100 hover:border-blue-300 hover:shadow-md transition-all text-left group"
+                        className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-left group"
                       >
                         <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100">
                           <Icon className="w-4 h-4 text-blue-600" />

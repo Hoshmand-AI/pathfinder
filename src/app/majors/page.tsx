@@ -35,9 +35,9 @@ export default function MajorsPage() {
     });
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-14">
+    <main className="min-h-screen bg-[#F5F5F7] pt-14">
       {/* Header */}
-      <div className="bg-white border-b border-gray-100 px-6 py-8">
+      <div className="bg-white border-b border-gray-200 px-6 py-8 shadow-sm">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-2xl font-bold text-gray-900 mb-1">Explore Majors & Degrees</h1>
             <p className="text-gray-500 text-sm mb-5">Discover {majors.length}+ fields of study with real salary data, job outlooks, and career paths.</p>
@@ -113,7 +113,7 @@ export default function MajorsPage() {
             {filtered.map((m) => {
               const saved = profile.savedMajors.includes(m.id);
               return (
-                <div key={m.id} className="bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 overflow-hidden group">
+                <div key={m.id} className="bg-white rounded-2xl border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 overflow-hidden group">
                   <Link href={`/majors/${m.slug}`} className="block p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
