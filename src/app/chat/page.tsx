@@ -104,19 +104,19 @@ export default function ChatPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-16 flex flex-col">
+    <main className="min-h-screen bg-gray-50 flex flex-col pt-14">
       <div className="flex flex-col flex-1">
         {/* Header */}
-        <div className="bg-white border-b border-gray-200 px-6 py-4 flex-shrink-0">
+        <div className="bg-white border-b border-gray-100 px-6 py-4 flex-shrink-0">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" />
+              <div className="w-10 h-10 rounded-2xl bg-blue-50 flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-blue-600" />
               </div>
               <div>
-                <h1 className="text-base font-semibold text-gray-900">AI Academic Advisor</h1>
+                <h1 className="text-lg font-bold text-gray-900">AI Academic Advisor</h1>
                 <div className="flex items-center gap-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  <div className="w-2 h-2 rounded-full bg-green-400" />
                   <span className="text-gray-500 text-xs">Online — Powered by GPT-4</span>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function ChatPage() {
             {messages.length > 0 && (
               <button
                 onClick={handleReset}
-                className="flex items-center gap-2 text-gray-500 hover:text-gray-700 text-sm transition-colors"
+                className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors"
               >
                 <RefreshCw className="w-4 h-4" /> New Chat
               </button>

@@ -45,22 +45,22 @@ export default function ParentDashboardPage() {
   ] as const;
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-16">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-800 to-indigo-700 px-6 py-10">
+    <main className="min-h-screen bg-gray-50 pt-14">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-100 px-6 py-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
-              <Users className="w-8 h-8 text-white" />
-              <h1 className="text-3xl font-black text-white">Parent Dashboard</h1>
+              <Users className="w-5 h-5 text-gray-600" />
+              <h1 className="text-2xl font-bold text-gray-900">Parent Dashboard</h1>
             </div>
-            <p className="text-blue-200">
+            <p className="text-gray-500 text-sm">
               Financial planning, school analysis, and timeline overview for{" "}
               {profile.firstName ? `${profile.firstName}'s` : "your student's"} college journey.
             </p>
           </div>
-        </div>
+      </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           {/* Sub-nav */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 mb-8">
             {navItems.map((item) => {
@@ -382,7 +382,7 @@ export default function ParentDashboardPage() {
               </div>
             </div>
           )}
-        </div>
+      </div>
     </main>
   );
 }
