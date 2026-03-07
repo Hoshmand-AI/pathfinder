@@ -9,56 +9,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50:  "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
-          800: "#1e40af",
-          900: "#1e3a8a",
+        navy: {
+          950: "#0A1628",
+          900: "#0F2140",
+          800: "#162D54",
+          700: "#1E3A6A",
         },
-        violet: {
-          50:  "#f5f3ff",
-          100: "#ede9fe",
-          200: "#ddd6fe",
-          300: "#c4b5fd",
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          600: "#7c3aed",
-          700: "#6d28d9",
-          800: "#5b21b6",
-          900: "#4c1d95",
+        gold: {
+          600: "#B8862E",
+          500: "#C8963E",
+          400: "#D4A94F",
+          100: "#FDF6E9",
         },
+        warm: {
+          700: "#4A443C",
+          600: "#6B6359",
+          500: "#8A8178",
+          400: "#B8B0A4",
+          300: "#E2DDD5",
+          200: "#F0EDE8",
+          100: "#F8F6F3",
+          50:  "#FDFCFA",
+        },
+        success: "#3D8B6E",
+        warning: "#C4873B",
+        danger:  "#B85C5C",
+        info:    "#4A7FB5",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-      },
-      backgroundImage: {
-        "hero-gradient": "linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #1e40af 100%)",
-        "card-gradient": "linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%)",
+        serif: ["DM Serif Display", "Georgia", "serif"],
+        sans:  ["DM Sans", "system-ui", "sans-serif"],
       },
       animation: {
-        "fade-up": "fadeUp 0.5s ease-out",
-        "fade-in": "fadeIn 0.4s ease-out",
-        "slide-in": "slideIn 0.3s ease-out",
-      },
-      keyframes: {
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideIn: {
-          "0%": { transform: "translateX(-10px)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
+        none: "none",
       },
     },
   },

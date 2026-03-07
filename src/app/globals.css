@@ -1,8 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --navy-950: #0A1628;
+  --navy-900: #0F2140;
+  --navy-800: #162D54;
+  --navy-700: #1E3A6A;
+
+  --gold-500: #C8963E;
+  --gold-400: #D4A94F;
+  --gold-600: #B8862E;
+  --gold-100: #FDF6E9;
+
+  --warm-50: #FDFCFA;
+  --warm-100: #F8F6F3;
+  --warm-200: #F0EDE8;
+  --warm-300: #E2DDD5;
+  --warm-400: #B8B0A4;
+  --warm-500: #8A8178;
+  --warm-600: #6B6359;
+  --warm-700: #4A443C;
+
+  --success: #3D8B6E;
+  --warning: #C4873B;
+  --danger: #B85C5C;
+  --info: #4A7FB5;
+
+  --background: var(--warm-50);
+  --foreground: var(--navy-950);
 }
 
 * {
@@ -12,13 +36,15 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+  background: var(--warm-50);
+  color: var(--warm-600);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,39 +54,28 @@ body {
   height: 5px;
 }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+::-webkit-scrollbar-thumb { background: var(--warm-300); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--warm-400); }
 
-.gradient-text {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
+/* Chat bubbles */
 .chat-bubble-user {
-  background: #0f172a;
+  background: var(--navy-900);
   color: white;
-  border-radius: 18px 18px 4px 18px;
+  border-radius: 16px 16px 4px 16px;
 }
 
 .chat-bubble-ai {
-  background: #f8fafc;
-  color: #0f172a;
-  border-radius: 18px 18px 18px 4px;
-  border: 1px solid #e2e8f0;
+  background: var(--warm-100);
+  color: var(--navy-950);
+  border-radius: 16px 16px 16px 4px;
+  border: 1px solid var(--warm-200);
 }
 
+/* Typing indicator */
 @keyframes typing-dot {
   0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
-  30% { transform: translateY(-6px); opacity: 1; }
+  30% { transform: translateY(-4px); opacity: 1; }
 }
 .typing-dot:nth-child(1) { animation: typing-dot 1.2s infinite 0s; }
 .typing-dot:nth-child(2) { animation: typing-dot 1.2s infinite 0.2s; }
 .typing-dot:nth-child(3) { animation: typing-dot 1.2s infinite 0.4s; }
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fadeIn { animation: fadeIn 0.3s ease forwards; }
